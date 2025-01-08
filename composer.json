@@ -1,13 +1,17 @@
 {
-    "name": "twistor/stream-util",
+    "name": "lhridley/stream-util",
     "type": "library",
-    "description": "Helper utilities for dealing with streams.",
+    "description": "Helper utilities for dealing with streams. (fork)",
     "license": "MIT",
     "homepage": "http://github.com/twistor/stream-util",
     "authors": [
         {
             "name": "Chris Leppanen",
             "email": "chris.leppanen@gmail.com"
+        },
+        {
+            "name": "Lisa Ridley",
+            "email": "lisa@codementality.com"
         }
     ],
     "require": {
@@ -15,6 +19,9 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~4.1"
+    },
+    "replace": {
+        "twistor/stream-util": "1.0.1"
     },
     "autoload": {
         "psr-4": {
