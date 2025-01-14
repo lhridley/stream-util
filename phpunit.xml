@@ -6,6 +6,7 @@
          stopOnFailure="false"
          syntaxCheck="true"
          verbose="true"
+         colors="always"
 >
     <testsuites>
         <testsuite name="Stream util tests">
