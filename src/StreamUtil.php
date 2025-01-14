@@ -84,13 +84,29 @@ class StreamUtil
      *
      * @param resource $stream The stream.
      *
-     * @return int The size of the stream.
+     * @return int|false The size of the stream, or false if it cannot be retrieved.
      */
     public static function getSize($stream)
     {
-        $stat = fstat($stream);
-
-        return $stat['size'];
+        $stat = stream_get_meta_data($stream);
+        if ($stat === FALSE) {
+            return FALSE;
+        }
+        switch ($stat['wrapper_type']) {
+            case 'plainfile':
+            case 'PHP':
+                $stats = fstat($stream);
+                return is_array($stats) && isset($stats['size']) ? $stats['size'] : FALSE;
+                break;
+            case 'http':
+                stream_context_set_default(['http' => ['method' => 'HEAD']]);
+                $head = array_change_key_case(get_headers($stat['uri'], 1));
+                return $head['content-length'] ?? FALSE;
+                break;
+            //@todo:  Add logic for other wrapper types
+            default:
+                return FALSE;
+        }
     }
 
     /**
