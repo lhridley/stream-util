@@ -1,9 +1,7 @@
 # Stream Utilities
+This is a forked and updated version of the original package, twistor/stream-util.
 
-[![Author](http://img.shields.io/badge/author-@chrisleppanen-blue.svg?style=flat-square)](https://twitter.com/chrisleppanen)
 [![Build Status](https://img.shields.io/travis/twistor/stream-util/master.svg?style=flat-square)](https://travis-ci.org/twistor/stream-util)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/twistor/stream-util.svg?style=flat-square)](https://scrutinizer-ci.com/g/twistor/stream-util/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/twistor/stream-util.svg?style=flat-square)](https://scrutinizer-ci.com/g/twistor/stream-util)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Packagist Version](https://img.shields.io/packagist/v/twistor/stream-util.svg?style=flat-square)](https://packagist.org/packages/twistor/stream-util)
 
@@ -12,13 +10,13 @@ Helper functions for dealing with streams.
 ## Installation
 
 ```
-composer require twistor/stream-util
+composer require lhridley/stream-util
 ```
 
 ## Usage
 
 ```php
-use Twistor\StreamUtil;
+use Lhridley\StreamUtil;
 
 $stream = fopen('php://temp', 'w+b');
 

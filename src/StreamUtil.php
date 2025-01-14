@@ -1,6 +1,6 @@
 <?php
 
-namespace Twistor;
+namespace lhridley;
 
 /**
  * Helper functions for dealing with streams.

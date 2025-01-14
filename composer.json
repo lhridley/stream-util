@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Helper utilities for dealing with streams. (fork)",
     "license": "MIT",
-    "homepage": "http://github.com/twistor/stream-util",
+    "homepage": "http://github.com/lhridley/stream-util",
     "authors": [
         {
             "name": "Chris Leppanen",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Twistor\\": "src/"
+            "Lhridley\\": "src/"
         }
     }
 }

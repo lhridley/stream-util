@@ -1,8 +1,8 @@
 <?php
 
-namespace Twistor\Tests;
+namespace Lhridley\Tests;
 
-use Twistor\StreamUtil;
+use Lhridley\StreamUtil;
 
 class StreamUtilTest extends \PHPUnit_Framework_TestCase
 {
