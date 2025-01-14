@@ -2,19 +2,18 @@
 
 namespace Lhridley\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Lhridley\StreamUtil;
 
-class StreamUtilTest extends \PHPUnit_Framework_TestCase
+class StreamUtilTest extends \PHPUnit\Framework\TestCase
 {
     protected $stream;
 
-    public function setUp()
-    {
+    public function setUp(): void {
         $this->stream = fopen('data://text/plain,aaaaaaaaaa', 'r+');
     }
 
-    public function tearDown()
-    {
+    public function tearDown(): void {
         if (is_resource($this->stream)) {
             fclose($this->stream);
         }

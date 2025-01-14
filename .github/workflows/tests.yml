@@ -11,15 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-#    - name: Installing PHP
-#      uses: shivammathur/setup-php@master
-#      with:
-#        php-version: 7.1
-#        extension-csv: mbstring, xdebug #optional
-#        ini-values-csv: "post_max_size=256M, short_open_tag=On" #optional
     - uses: php-actions/composer@v6 # or alternative dependency management
-    - uses: php-actions/phpunit@v3
+    - uses: php-actions/phpunit@v4
       with:
         configuration: phpunit.xml
-        version: 3.7.28
-        php_version: 7.4
+        version: 11.5.3
+        php_version: 8.3
